@@ -38,7 +38,7 @@ const MarketAnalysis = () => {
             {marketInfo.map((item, index) => (
               <tr key={index} className="border-b">
                 <td className="px-4 py-2 border border-gray-200">
-                  {item.information_reception_method || "N/A"}
+                  {item.information_reception_method || "Others"}
                 </td>
                 <td className="px-4 py-2 border border-gray-200">
                   {item.count}
