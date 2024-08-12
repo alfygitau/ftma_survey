@@ -213,7 +213,6 @@ const RoleExperience = () => {
               <XAxis dataKey="role" />
               <YAxis />
               <Tooltip />
-              <Legend />
               <Line
                 type="monotone"
                 dataKey="count"
@@ -226,7 +225,9 @@ const RoleExperience = () => {
       </div>
       <div className="w-full flex justify-start">
         <div className="h-[600px] bg-white p-[20px] w-[100%] flex flex-col justify-center gap-[20px]">
-          <p className="text-center">Experience in dealing with vendors</p>
+          <p className="text-center">
+            Do you have experience in dealing with vendors
+          </p>
           <ResponsiveContainer width="100%" height={400}>
             <BarChart
               data={vendorExperience}

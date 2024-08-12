@@ -77,7 +77,6 @@ const Inputs = () => {
               <XAxis dataKey="input" />
               <YAxis />
               <Tooltip />
-              <Legend />
               <Line
                 type="monotone"
                 dataKey="count"
