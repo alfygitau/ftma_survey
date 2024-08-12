@@ -9,7 +9,10 @@ const Sidebar = () => {
   return (
     <div className="flex flex-col h-full py-[20px]">
       <div className="h-full flex flex-col justify-between">
-        <div className="w-full h-[10%] flex items-center">
+        <div
+          onClick={() => navigate("/dashboard")}
+          className="w-full h-[10%] cursor-pointer flex items-center"
+        >
           <img className="w-[100%]" src="/logo.jpeg" alt="logo" />
         </div>
         <div className="h-[60%] flex flex-col gap-[20px]">
