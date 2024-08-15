@@ -20,7 +20,7 @@ COPY . .
 RUN npm run build
 
 # Expose the port the app runs on
-EXPOSE 5173
+EXPOSE 3000
 
 # Command to start the app using pm2
 CMD ["pm2-runtime", "npm", "--", "start"]

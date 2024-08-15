@@ -54,3 +54,27 @@ export const getChallengesInformation = async () => {
     throw new Error(error);
   }
 };
+
+export const surveyLogin = async (username, password) => {
+  try {
+    const response = await axios.post(
+      "https://ftma.egroup.co.ke/training/api/v1/survey/login",
+      { username, password }
+    );
+    return response;
+  } catch (error) {
+    throw new Error(error);
+  }
+};
+
+export const surveyRegister = async (email, msisdn, password) => {
+  try {
+    const response = await axios.post(
+      "https://ftma.egroup.co.ke/training/api/v1/survey/create",
+      { email, msisdn, password }
+    );
+    return response;
+  } catch (error) {
+    throw new Error(error);
+  }
+};

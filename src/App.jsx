@@ -10,12 +10,14 @@ import RoleExperience from "./pages/Roles/RoleExperience";
 import MarketAnalysis from "./pages/market/MarketAnalysis";
 import Inputs from "./pages/inputs/Inputs";
 import MarketChallenges from "./pages/market/MarketChallenges";
+import Register from "./pages/auth/Register";
 
 function App() {
   return (
     <>
       <Routes>
         <Route path="/" element={<Login />} />
+        <Route path="/auth/register" element={<Register />} />
         <Route path="/dashboard" element={<HomeLayout />}>
           <Route index element={<Dashboard />} />
           <Route path="roles-experience" element={<RoleExperience />} />

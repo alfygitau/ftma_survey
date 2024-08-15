@@ -10,11 +10,12 @@ import {
 import { useAuth } from "../../contexts/AuthContext";
 // import { authLogin } from "../../sdk/auth/auth";
 import { toast } from "react-toastify";
+import { surveyLogin } from "../../sdk/survey";
 
 const Login = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const { login: loginUser } = useAuth();
 
@@ -63,18 +64,18 @@ const Login = () => {
   const login = async (e) => {
     e.preventDefault();
     try {
-    //   const response = await authLogin(email, password);
+      const response = await surveyLogin(username, password);
       if (response.status === 200) {
         loginUser({
-          uid: response.data.id,
-          name: response.data.name,
-          email: response.data.email,
+          uid: response.data.message.userId,
+          name: response.data.message.email,
+          email: response.data.message.email,
           photoURL: "",
-          token: response.data.accessToken,
-          phoneNumber: response.data.msisdn,
+          token: response.data.message.email,
+          phoneNumber: response.data.message.msisdn,
           idToken: "",
           provider: "",
-          user: "",
+          user: response.data.message,
         });
         toast.success("Success login");
         navigate("/dashboard");
@@ -104,11 +105,11 @@ const Login = () => {
           <form onSubmit={login} className="w-full h-full">
             <p className="text-[20px] text-left">Login</p>
             <div className="w-full flex flex-col gap-[5px] mb-[20px]">
-              <label htmlFor="email">Username</label>
+              <label htmlFor="username">Username</label>
               <input
                 type="text"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
                 placeholder="Enter your username"
                 className="h-[50px] w-full text-[14px] rounded-[5px] border px-[10px] border-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0 focus:border-primary-110"
               />
@@ -124,7 +125,10 @@ const Login = () => {
               />
             </div>
             <div className="w-full mb-[20px]">
-              <button className="h-[50px] w-full rounded-[5px] text-white bg-[#12B981]">
+              <button
+                type="submit"
+                className="h-[50px] w-full rounded-[5px] text-white bg-[#12B981]"
+              >
                 Login
               </button>
             </div>
