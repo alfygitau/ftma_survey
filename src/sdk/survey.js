@@ -78,3 +78,25 @@ export const surveyRegister = async (email, msisdn, password) => {
     throw new Error(error);
   }
 };
+
+export const getTrainings = async (currentPage, pageSize) => {
+  try {
+    const response = await axios.get(
+      `https://ftma.egroup.co.ke/training/api/v1/survey/respondents/training-details/data?page=${currentPage}&size=${pageSize}`
+    );
+    return response;
+  } catch (error) {
+    throw new Error(error);
+  }
+};
+
+export const getTrainingNeeds = async (currentPage, pageSize) => {
+  try {
+    const response = await axios.get(
+      `https://ftma.egroup.co.ke/training/api/v1/survey/respondents/training-needs/data?page=${currentPage}&size=${pageSize}`
+    );
+    return response;
+  } catch (error) {
+    throw new Error(error);
+  }
+};

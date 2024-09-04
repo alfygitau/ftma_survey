@@ -11,6 +11,8 @@ import MarketAnalysis from "./pages/market/MarketAnalysis";
 import Inputs from "./pages/inputs/Inputs";
 import MarketChallenges from "./pages/market/MarketChallenges";
 import Register from "./pages/auth/Register";
+import Training from "./pages/training/training";
+import TrainingNeeds from "./pages/training/TrainingNeeds";
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
           <Route index element={<Dashboard />} />
           <Route path="roles-experience" element={<RoleExperience />} />
           <Route path="input-analysis" element={<Inputs />} />
+          <Route path="training" element={<Training />} />
+          <Route path="training-needs" element={<TrainingNeeds />} />
           <Route
             path="market-access-challenges"
             element={<MarketChallenges />}

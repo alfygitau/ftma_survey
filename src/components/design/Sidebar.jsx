@@ -36,7 +36,7 @@ const Sidebar = () => {
                 d="M8.557 2.75H4.682A1.932 1.932 0 0 0 2.75 4.682v3.875a1.942 1.942 0 0 0 1.932 1.942h3.875a1.942 1.942 0 0 0 1.942-1.942V4.682A1.942 1.942 0 0 0 8.557 2.75m10.761 0h-3.875a1.942 1.942 0 0 0-1.942 1.932v3.875a1.943 1.943 0 0 0 1.942 1.942h3.875a1.942 1.942 0 0 0 1.932-1.942V4.682a1.932 1.932 0 0 0-1.932-1.932m0 10.75h-3.875a1.942 1.942 0 0 0-1.942 1.933v3.875a1.942 1.942 0 0 0 1.942 1.942h3.875a1.942 1.942 0 0 0 1.932-1.942v-3.875a1.932 1.932 0 0 0-1.932-1.932M8.557 13.5H4.682a1.943 1.943 0 0 0-1.932 1.943v3.875a1.932 1.932 0 0 0 1.932 1.932h3.875a1.942 1.942 0 0 0 1.942-1.932v-3.875a1.942 1.942 0 0 0-1.942-1.942"
               />
             </svg>
-            <span>Dashboard</span>
+            <span>Homepage</span>
           </NavLink>
           <NavLink
             exact
@@ -59,7 +59,7 @@ const Sidebar = () => {
                 class="ouiIcon__fillSecondary"
               />
             </svg>
-            <span className="truncate">Roles, skills and experience</span>
+            <span className="truncate">Roles, skills & experience</span>
           </NavLink>
           <NavLink
             exact
@@ -84,7 +84,7 @@ const Sidebar = () => {
                 <path stroke-linecap="round" d="M10 20V10m28 24V21m0-9V4" />
               </g>
             </svg>
-            <span className="truncate">Market information analysis</span>
+            <span className="truncate">Market information</span>
           </NavLink>
           <NavLink
             exact
@@ -158,7 +158,7 @@ const Sidebar = () => {
                 ry="6.548"
               />
             </svg>
-            <span className="truncate">Farm inputs analysis</span>
+            <span className="truncate">Farm inputs</span>
           </NavLink>
           <NavLink
             exact
@@ -183,11 +183,11 @@ const Sidebar = () => {
                 <path d="M18 2C14.897 2 8.465 4.378 4.771 5.854C3.079 6.53 2 8.178 2 10s1.08 3.47 2.771 4.146C8.465 15.622 14.897 18 18 18m-7 4l-1.943-1.07A5.93 5.93 0 0 1 6.045 15" />
               </g>
             </svg>
-            <span className="truncate">Market access challenges</span>
+            <span className="truncate">Market access</span>
           </NavLink>
           <NavLink
             exact
-            to="/dashboard/settings"
+            to="/dashboard/training"
             className="flex items-center gap-[10px] text-[#6B7280]"
           >
             <svg
@@ -207,7 +207,7 @@ const Sidebar = () => {
                 <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0-6 0" />
               </g>
             </svg>
-            <span>Settings</span>
+            <span>Training needs</span>
           </NavLink>
         </div>
         <div className="h-[20%] w-full flex items-end">
