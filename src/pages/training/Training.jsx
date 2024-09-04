@@ -36,7 +36,7 @@ const Training = () => {
   return (
     <div className="p-[20px] w-full h-full overflow-y-auto">
       <div className="flex my-[20px] items-center justify-between">
-        <p className="text-[14px]">Trainings</p>
+        <p className="text-[14px]">Trainings acquired</p>
         <p
           onClick={() => navigate("/dashboard/training-needs")}
           className="text-[14px] text-[#00ff] cursor-pointer underline"
